@@ -1,13 +1,30 @@
 import React, { useReducer } from "react";
 import "./App.css";
-import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "./redux/store";
-import { increment, decrement, pow } from "./redux/features/count.slice";
+//import { useDispatch, useSelector } from "react-redux";
+//import { RootState } from "./redux/store";
+//import { increment, decrement, pow } from "./redux/features/count.slice";
+import ListagemProdutos from "./components/listProdutos";
 // npx create-react-app redux_teste --template typescript
 
 function App() {
+  return (
+    <div
+    style={{
+      display: "flex",
+      justifyContent: "center",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyItems: "center",
+    }}
+  >
+    <div style={{ width: "50%" }}>
+      <ListagemProdutos />
+    </div>
+  </div>
+);
 
-  const dispatch = useDispatch();
+
+ /* const dispatch = useDispatch();
   const count = useSelector((state: RootState)=> state.count);
 
 
@@ -18,7 +35,7 @@ function App() {
     <button onClick={()=>dispatch(decrement())}>Decrement</button>
     <button onClick={()=>dispatch(pow())}>pow</button>
     </div>
-  )
+  )*/
 }
 
 export default App;

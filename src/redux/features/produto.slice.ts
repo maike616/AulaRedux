@@ -14,7 +14,16 @@ interface ProdutoState {
 }
 
 const initialState: ProdutoState = {
-  produtos: [],
+  produtos: [
+    {
+      id: 1,
+      nome: "sabonete",
+      preco: 1.9,
+      estoque: 10,
+      createdAt: "",
+      updatedAt: "",
+    },
+  ],
 };
 
 const produtoSlice = createSlice({
