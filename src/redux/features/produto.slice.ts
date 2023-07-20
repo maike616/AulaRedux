@@ -20,4 +20,10 @@ const initialState: ProdutoState = {
 const ProdutoSlice = createSlice({
   name: "produtoSlice",
   initialState: initialState,
+
+  reducers: {
+    addProduto(state, action) {
+      state.produtos.push(action.payload);
+    },
+  },
 });
