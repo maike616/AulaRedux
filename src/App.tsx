@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useReducer } from "react";
+import "./App.css";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "./redux/store";
+import { increment, decrement, pow } from "./redux/features/count.slice";
+// npx create-react-app redux_teste --template typescript
 
 function App() {
+
+  const dispatch = useDispatch();
+  const count = useSelector((state: RootState)=> state.count);
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <p>{count.value}</p>
+    <button onClick={()=>dispatch(increment())}>Increment</button>
+    <button onClick={()=>dispatch(decrement())}>Decrement</button>
+    <button onClick={()=>dispatch(pow())}>pow</button>
     </div>
-  );
+  )
 }
 
 export default App;
