@@ -17,7 +17,7 @@ const initialState: ProdutoState = {
   produtos: [],
 };
 
-const ProdutoSlice = createSlice({
+const produtoSlice = createSlice({
   name: "produtoSlice",
   initialState: initialState,
 
@@ -27,3 +27,6 @@ const ProdutoSlice = createSlice({
     },
   },
 });
+
+export const { addProduto } = produtoSlice.actions;
+export default produtoSlice.reducer;
