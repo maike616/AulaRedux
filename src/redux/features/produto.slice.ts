@@ -17,7 +17,7 @@ const initialState: ProdutoState = {
   produtos: [
     {
       id: 1,
-      nome: "sabonete",
+      nome: "Sabonete",
       preco: 1.9,
       estoque: 10,
       createdAt: "",
