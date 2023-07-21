@@ -1,12 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 interface Produto {
-  id: number;
   nome: string;
   preco: number;
   estoque: number;
-  createdAt: string;
-  updatedAt: string;
 }
 
 interface ProdutoState {
@@ -16,12 +13,9 @@ interface ProdutoState {
 const initialState: ProdutoState = {
   produtos: [
     {
-      id: 1,
       nome: "Sabonete",
       preco: 1.9,
       estoque: 10,
-      createdAt: "",
-      updatedAt: "",
     },
   ],
 };
