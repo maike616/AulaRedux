@@ -1,9 +1,10 @@
-import React, { useReducer } from "react";
+//import React, { useReducer } from "react";
 import "./App.css";
 //import { useDispatch, useSelector } from "react-redux";
 //import { RootState } from "./redux/store";
 //import { increment, decrement, pow } from "./redux/features/count.slice";
 import ListagemProdutos from "./components/listProdutos";
+import FormularioProduto from "./components/formProduto";
 // npx create-react-app redux_teste --template typescript
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
     }}
   >
     <div style={{ width: "50%" }}>
+      <FormularioProduto/>
       <ListagemProdutos />
     </div>
   </div>
