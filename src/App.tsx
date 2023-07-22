@@ -5,10 +5,18 @@ import "./App.css";
 //import { increment, decrement, pow } from "./redux/features/count.slice";
 import ListagemProdutos from "./components/listProdutos";
 import FormularioProduto from "./components/formProduto";
+import { useDispatch } from "react-redux";
+import { AppDispatch } from "./redux/store";
+import { useEffect } from "react";
+import { fetchProdutos } from "./redux/features/produto.slice";
 // npx create-react-app redux_teste --template typescript
 
 function App() {
-  return (
+  const dispatch= useDispatch<AppDispatch>();
+  useEffect(()=>{
+    dispatch(fetchProdutos());
+  });
+   return (
     <div
     style={{
       display: "flex",

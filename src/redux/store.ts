@@ -1,17 +1,18 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import ProdutoReducer from "./features/produto.slice";
+import { apiProdutoReducer } from "./features/produto.slice";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import { apiLoginReducer } from "../redux/features/api.login.slice";
 
 const rooReducer = combineReducers({
-  produto: ProdutoReducer,
+  produto: apiProdutoReducer,
   login: apiLoginReducer,
 });
 
 const persistConfig = {
   key: "root",
   storage,
+  blacklist: ["produto"],
 };
 
 const persistedReducer = persistReducer(persistConfig, rooReducer);

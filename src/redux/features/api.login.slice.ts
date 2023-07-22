@@ -23,7 +23,7 @@ export const doLogin = createAsyncThunk(
   "api/login",
   async (dataLogin: object) => {
     const response: AxiosResponse = await api.post(
-      "http://localhost:3333/v1/login",
+      "https://ecb9-200-129-163-72.ngrok-free.app/v1/login",
       dataLogin,
       { withCredentials: true }
     );

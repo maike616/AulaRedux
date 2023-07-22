@@ -20,7 +20,7 @@ export default function Login() {
     dispatch(
       doLogin({
         email: email,
-        password: password,
+        senha: password,
       })
     );
   }
